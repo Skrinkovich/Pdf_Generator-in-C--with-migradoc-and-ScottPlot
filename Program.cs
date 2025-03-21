@@ -1,45 +1,4 @@
-﻿//using System;
-//using System.Diagnostics;
-//using System.IO;
-//using PdfSharp;
-//using PdfSharp.Drawing;
-//using PdfSharp.Pdf;
-//using PdfSharp.Pdf.IO;
-//namespace ConsoleApp5
-//{
-//    /// <summary>
-//    /// This sample is the obligatory Hello World program.
-//    /// </summary>
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            // Create a new PDF document
-//            PdfDocument document = new PdfDocument();
-//            document.Info.Title = "Created with PDFsharp";
-
-//            // Create an empty page
-//            PdfPage page = document.AddPage();
-
-//            // Get an XGraphics object for drawing
-//            XGraphics gfx = XGraphics.FromPdfPage(page);
-
-//            // Create a font
-//            XFont font = new XFont("Verdana", 20, XFontStyle.BoldItalic);
-
-//            // Draw the text
-//            gfx.DrawString("Hello, World!", font, XBrushes.Black,
-//              new XRect(0, 0, page.Width, page.Height),
-//              XStringFormats.Center);
-
-//            // Save the document...
-//            const string filename = "HelloWorld.pdf";
-//            document.Save(filename);
-//            // ...and start a viewer.
-//            Process.Start(filename);
-//        }
-//    }
-//}
+﻿
 
 //using System;
 //using System.Diagnostics;
@@ -86,11 +45,7 @@ namespace ConsoleApp5
         private static void MakeScatterPlot(XGraphics gfx, double[] water_supply_temp, double[] water_return_temp, double[] water_supply_setpoint, double[] xx,  int x, int y, double scale, string name)
             {
 
-            var plt = new ScottPlot.Plot(700, 400);
-
-
-            //double[] x = ScottPlot.DataGen.Consecutive(pointCount);
-            //double[] cos = ScottPlot.DataGen.Cos(pointCount);
+            var plt = new ScottPlot.Plot(700, 400); 
 
             plt.PlotScatter(xx, water_supply_temp, markerSize: 0, lineWidth: 1, color: Color.DarkBlue);
             plt.PlotScatter(xx, water_return_temp, markerSize: 0, lineWidth: 1, color: Color.Yellow);
